@@ -14,6 +14,7 @@
     </div>
 </div>
 
+<div class="to_center">
 
 
 <div class="cocktail_name">
@@ -29,7 +30,7 @@
   <div class="ingredients">
     <ul><% @cocktail.doses.each do |d| %>
       <li>
-        <%= d.description %> de
+        <%= d.description %> <strong>of</strong>
         <%= d.ingredient.name %> -
         <%= link_to "edit", edit_dose_path(d) %> -
         <%= link_to "delete", dose_path(d),
@@ -43,3 +44,4 @@
   </div>
 </div>
 
+</div>

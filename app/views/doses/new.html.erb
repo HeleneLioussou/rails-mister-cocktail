@@ -15,15 +15,15 @@
     </div>
 </div>
 
-<h4>Add a new ingredient</h4>
+<h4 id="ingredients">Add a new ingredient</h4>
 
 
 <ul>
-  <li>
+  <li class="form_ingredients">
     <%= simple_form_for [@cocktail, @dose] do |f| %>
         <%= f.input :description %>
         <%= f.association :ingredient, as: :radio_buttons %>
-        <%= f.submit "add", class: "btn btn-primary" %>
+        <%= f.submit "add", class: "btn-secondary" %>
       <% end %>
   </li>
 </ul>
