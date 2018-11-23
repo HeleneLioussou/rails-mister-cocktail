@@ -19,10 +19,22 @@
 <ul class="container_cards">
   <% @cocktails.each do |c|  %>
 
-    <li class="card" style="background-image: url(<%= asset_path "drink.jpg" %>);">
+    <li class="card" style="
+      <% if c.photo.blank? %>
+        <%= "background-color:red" %>
+      <% else %>
+        <%= "background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+         url(' #{cl_image_path c.photo, height: 300, width: 400, crop: :fill} ')" %>
+      <% end %>
+    ;">
       <%= c.name %> -
       <%= link_to "see", cocktail_path(c) %>
+
+
     </li>
+
+
+
   <% end %>
 </ul>
 
@@ -31,4 +43,3 @@
 </div>
 
 
-<!-- https://picsum.photos/200/300?image=0 -->
