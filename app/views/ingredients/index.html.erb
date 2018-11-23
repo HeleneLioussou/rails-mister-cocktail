@@ -1,3 +1,20 @@
+<div class="navbar-wagon">
+    <!-- Logo -->
+    <%= link_to cocktails_path, class: "navbar-wagon-brand" do %>
+      <%= image_tag "cocktail.png", height: 50 %>
+    <% end %>
+
+    <!-- Right Navigation -->
+    <div class="navbar-wagon-right hidden-xs hidden-sm">
+
+      <!-- Links -->
+      <%= link_to "Add New Cocktail", new_cocktail_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Ingredients", ingredients_path, class: "navbar-wagon-item navbar-wagon-link" %>
+
+    </div>
+</div>
+
+
 <h1>My ingredients</h1>
 
 <ul>

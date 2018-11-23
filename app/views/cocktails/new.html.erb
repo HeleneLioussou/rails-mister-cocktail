@@ -3,8 +3,10 @@
   <div class="homepage" style="background-image: url(<%= asset_path "home_background.jpg" %>);">
 
   <div class="menu">
-    <a href=<%= cocktails_path %>>Menu</a>
 
+  <%= link_to cocktails_path do %>
+      <%= image_tag "cocktail.png", height: 50 %>
+    <% end %>
   </div>
 
   <div class="start">
