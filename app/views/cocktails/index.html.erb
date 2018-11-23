@@ -1,0 +1,39 @@
+<div class="navbar-wagon">
+    <!-- Logo -->
+    <%= link_to new_cocktail_path, class: "navbar-wagon-brand" do %>
+      <%= image_tag "cocktail.png", height: 50 %>
+    <% end %>
+
+    <!-- Right Navigation -->
+    <div class="navbar-wagon-right hidden-xs hidden-sm">
+
+      <!-- Links -->
+      <%= link_to "Ingredients", ingredients_path, class: "navbar-wagon-item navbar-wagon-link" %>
+
+      <%= link_to "All Recipes", cocktails_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Add New", new_cocktail_path, class: "navbar-wagon-item navbar-wagon-link" %>
+
+
+    </div>
+
+</div>
+
+<div >
+<ul class="container_cards">
+  <% @cocktails.each do |c|  %>
+
+    <li class="card" style="background-image: url(<%= asset_path "drink.jpg" %>);">
+      <%= c.name %> -
+      <%= link_to "see", cocktail_path(c) %>
+
+    </li>
+  <% end %>
+</ul>
+
+<p><%= link_to "new cocktail", new_cocktail_path %></p>
+
+
+</div>
+
+
+<!-- https://picsum.photos/200/300?image=0 -->

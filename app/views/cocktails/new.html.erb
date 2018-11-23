@@ -1,0 +1,25 @@
+<div class=container>
+
+  <div class="homepage" style="background-image: url(<%= asset_path "home_background.jpg" %>);">
+
+  <div class="menu">
+    <a href=<%= cocktails_path %>>Menu</a>
+
+  </div>
+
+  <div class="start">
+    <h1>My Cocktail Closet</h1>
+
+    <h4>Store your cocktails, save your parties</h4>
+
+    <p>
+      <%= simple_form_for [@cocktail] do |f| %>
+        <%= f.text_field :name %>
+        <%= f.submit "add a cocktail", class: "btn btn-secondary btn-sm" %>
+      <% end %>
+    </p>
+  </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,36 @@
+.homepage {
+  // background-image: url("/images/home_background.jpeg");
+  width: 2000px;
+  height: 900px;
+  background-size: cover;
+  margin: none;
+
+}
+
+.container {
+  display: flex;
+  width: 1700px;
+  height: 800px;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.start {
+  color: #BBB0A7;
+  margin-top: 350px;
+  margin-left: 70px;
+}
+
+
+#cocktail_name {
+  height: 35px;
+  width: 300px;
+  padding-top: 0px;
+}
+
+.menu {
+  margin-top: 30px;
+  margin-left: 70px;
+}
